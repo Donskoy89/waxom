@@ -1,2 +1,23 @@
 // main: ../main.less
 
+.browsers {
+    width: 100%;
+	height: 482px;
+    position: relative;
+    &__item {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        &-1 {
+            left: -15px;
+        }
+        &-2 {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        &-3 {
+            right: -15px;
+        }
+    }
+}
