@@ -1,0 +1,97 @@
+// main: ../main.less
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+        flex-basis: 33.3333%;
+        padding: 0 1.5rem;
+        margin-bottom: 3rem;
+    }
+    &__header {
+        background: @card-bg-header;
+        position: relative;
+        &-img {
+            display: block;
+            opacity: 1;
+            transition: opacity .2s linear;
+        }
+        &-links {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%,-50%,0);
+        opacity: 0;
+            &_item {
+                width: 26px;
+                height: 26px;
+                text-decoration: none;
+                fill: @light;
+                margin: 1.5rem;
+                transition: fill .2s linear;
+                &:hover {
+                    fill: @golden;
+                }
+            }
+        }
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid @section-gray;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            transition: border-color .2s linear;
+        }
+    }
+    
+    &__footer {
+        padding: 3rem;
+        width: 100%;
+        background: @section-gray;
+        transition: background .2s linear;
+        &-title {
+            font-family: @ral;
+            font-weight: 500;
+            font-size: 2rem;
+            color: @golden;
+            margin-bottom: 1.5rem;
+            transition: color .2s linear;
+        }
+        &-text {
+            font-size: 1.4rem;
+            color: #d1d1d1;
+            transition: color .2s linear;
+        }
+    }
+    &__item:hover &__header-img {
+        opacity: .3;
+    }
+    &__item:hover &__header-links {
+        opacity: 1;
+    }
+    &__item:hover &__header::after {
+        border-bottom-color: @card-bg-footer;
+    }
+    &__item:hover &__footer {
+        background: @card-bg-footer;
+    }
+    &__item:hover &__footer-title {
+        color: @light;
+    }
+    &__item:hover &__footer-text {
+        color: @golden;
+    }
+}
+
+
+
+
+
+
