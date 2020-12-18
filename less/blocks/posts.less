@@ -1,0 +1,116 @@
+// main: ../main.less
+.post {
+    display: flex;
+    &__item {
+        padding: 1.5rem;
+        flex-basis: 33.3333%;
+    }
+    &__header {
+        background: @card-bg-header;
+        position: relative;
+        &-img {
+            display: block;
+            opacity: 1;
+            transition: opacity .2s linear;
+        }
+        &-date {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 5px;
+            
+            font-family: @mon;
+            font-weight: 300;
+            font-size: 24px;
+            text-align: center;
+            background: #363636;
+            line-height: 35px;
+            color: @light;
+            z-index: 2;
+            transition: background .2s linear;
+            
+            & span {
+                display: block;
+                line-height: 25px;
+                font-family: @rob;
+                font-size: 12px;
+                background: #252525;
+                width: 100%;
+                padding: 0 13px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                transition: background .2s linear;
+            }
+        }
+    }
+    &__footer {
+        padding: 30px;
+        border: 1px solid @posts-border;
+        border-top: 0;
+        background: @light;
+        transition: all .2s linear;
+        &-title {
+            font-family: @ral;
+            font-weight: 500;
+            font-size: 2rem;
+            color: @darkText;
+            margin-bottom: 2rem;
+            transition: color .2s linear;
+        }
+        &-text {
+            font-size: 1.4rem;
+            line-height: 1.57;
+            margin-bottom: 2.5rem;
+            transition: color .2s linear;
+        }
+        &-link {
+            color: @golden;
+            text-decoration: none;
+            &::after {
+                content: "";
+                display: inline-block;
+                margin-left: 9px;
+                width: 0;
+                height: 0;
+                border-left: 8px solid @golden;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+            }
+        }
+    }
+    &__item:hover &__header-img {
+        opacity: .3;
+    }
+    &__item:hover &__header-date {
+        background: @golden;
+    }
+    &__item:hover &__header-date span {
+        background: darken(@golden,20%);
+    }
+    &__item:hover &__footer {
+        background: @card-bg-footer;
+        border-color: @card-bg-footer;
+    }
+    &__item:hover &__footer-title {
+        color: @golden;
+    }
+    &__item:hover &__footer-text {
+        color: @light;
+    }
+    &__footer-link:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
