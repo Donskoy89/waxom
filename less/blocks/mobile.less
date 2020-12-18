@@ -1,0 +1,41 @@
+// main: ../main.less
+.mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &__img {
+        width: 40%;
+    }
+    &__content {
+        width: 60%;
+        &-title {
+            color: @darkText;
+            font-family: @ral;
+            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+        &-text {
+            line-height: 1.75;
+            margin-bottom: 3rem;
+        }
+        &-list {
+            list-style: none;
+            padding: 0;
+            & li {
+                margin-bottom: 2rem;
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 21px;
+                    height: 21px;
+                    background: url(../img/list.png) center center no-repeat;
+                    background-size: contain;
+                    margin: 0 2.5rem 0 4.5rem;
+                }
+            }
+        }
+    }
+}
