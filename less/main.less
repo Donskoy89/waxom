@@ -1,11 +1,45 @@
 // out: ../css/main.css, compress: true
+
 @import 'var';
 @import 'mixin';
-* {
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+html {
+    font-size: 10px;
 }
 body {
     margin: 0;
-    background-color: #ccc;
-    color: @light;
+    background: @light;
+    color: @text;
+    font-family: @mon;
+    font-size: 1.6rem;
+    line-height: 1;
 }
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/buttons';
+
+
+
+
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Raleway', sans-serif;
+//font-family: 'Roboto', sans-serif;
+
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Raleway:wght@400;500;600;700;800&family=Roboto&display=swap');
