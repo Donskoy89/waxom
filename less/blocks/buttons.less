@@ -7,7 +7,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: @light;
-    background: #998675;
+    background: @btn;
     border-radius: 5px;
     box-shadow: 0 5px rgb(115, 99, 87);
     
@@ -15,5 +15,8 @@
     font-size: 1.4rem;
     font-weight: 800;
     
-    transition: all .2s ease;
+    transition: background .2s ease;
+    &:hover {
+        background: darken(@btn,10%);
+    }
 }
