@@ -1,0 +1,19 @@
+// main: ../main.less
+
+.logos {
+    background: url(../../img/logos/logos-bg.jpg) center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__item {
+        flex-basis: 25%;
+        & img {
+            display: block;
+        }
+    }
+}
