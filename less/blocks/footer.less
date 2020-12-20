@@ -34,6 +34,40 @@
                 border-left-color: @light;
             }
         }
+        &-posts {
+            border-bottom: 1px solid #252525;
+            padding-bottom: 2rem;
+            & + & {
+                padding-top: 2rem;
+            }
+            &_date {
+                color: darken(@darkText,12%);
+                font-size: 1.2rem;
+                transition: color .2s linear;
+            }
+            &_text {
+                line-height: 1.42;
+                font-size: 1.4rem;
+                color: @darkText;
+                transition: color .2s linear;
+            }
+            &_link {
+                color: @footer-link-blue;
+                &.light {
+                    color: @footer-link-light;
+                }
+            }
+            
+            &:hover &_date {
+                    color: @light;
+                }
+            &:hover &_text {
+                color: @golden;
+            }
+            &:last-child {
+                border: 0;
+            }
+        }
     }
     
 }

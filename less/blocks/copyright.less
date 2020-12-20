@@ -1,0 +1,43 @@
+// main: ../main.less
+
+.copyright {
+    padding: 4.5rem 0;
+    background: @copyright-bg;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__side {
+        display: flex;
+    }
+    &__item {
+        padding-right: 1rem;
+        margin-right: 1rem;
+        border-right: 1px solid #1e1e1e;
+        color: @darkText;
+        font-size: 1.3rem;
+        font-family: @mon;
+        font-weight: 300;
+        & span {
+            color: @footer-link-light;
+            font-size: 1.3rem;
+            font-family: @mon;
+            font-weight: 300;
+        }
+        & a {
+            text-decoration: none;
+            color: @darkText;
+            &:hover {
+                color: @golden;
+            }
+            font-size: 1.3rem;
+            font-family: @mon;
+            font-weight: 300;
+        }
+        &:last-child {
+            border-right: 0;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
